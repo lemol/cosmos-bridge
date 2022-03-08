@@ -1,0 +1,19 @@
+.galery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.galery > div {
+  flex: 1 1 10%;
+  padding: 10px;
+}
+
+.image img {
+  min-width: 120px;
+  background-color: antiquewhite;;
+}
+
+.image .title {
+  font-size: 0.6em;
+  text-align: center;
+}

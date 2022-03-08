@@ -1,8 +1,8 @@
 export default function Image({ href, title }) {
   return (
-    <div>
-      <img src={href} alt={title} />
-      <div>{title}</div>
+    <div className="image">
+      <img src={href} alt={title} height="180" />
+      <div className="title">{title}</div>
     </div>
   );
 }

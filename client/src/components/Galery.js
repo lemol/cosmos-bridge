@@ -1,10 +1,13 @@
 import Image from "./Image";
+import "./Galery.css";
 
 export default function Galery({ images }) {
   return (
-    <div>
+    <div className="galery">
       {images.map((image) => (
-        <Image key={image.href} href={image.href} title={image.title} />
+        <div key={image.href}>
+          <Image href={image.href} title={image.title} />
+        </div>
       ))}
     </div>
   );

@@ -20,7 +20,7 @@ const SEARCH_QUERY = gql`
 
 export default function App() {
   const [query, setQuery] = useState("");
-  const [from, _setFrom] = useState(1);
+  const [from, setFrom] = useState(1);
   const [search, { loading, data }] = useLazyQuery(SEARCH_QUERY);
 
   const handleQueryChange = (event) => {
@@ -28,6 +28,7 @@ export default function App() {
   }
 
   const handleSearch = () => {
+    setFrom(1);
     search({ variables: { query, from } });
   }
 
