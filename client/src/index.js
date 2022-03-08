@@ -6,11 +6,12 @@ import App from "./App";
 
 import "./index.css";
 
+const uri = process.env.REACT_APP_GRAPHQL_ENDPOINT;
 const cache = new InMemoryCache();
 
 const client = new ApolloClient({
   cache,
-  uri: "http://localhost:4000/graphql",
+  uri,
 });
 
 ReactDOM.render(
