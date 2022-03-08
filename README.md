@@ -2,6 +2,7 @@
 
 > Creating a bridge 🚀 to the universe 🌌
 
+**[🚀 Live preview](https://cosmos-bridge-client.fly.dev)**
 
 ## Features
 
@@ -11,13 +12,13 @@
 
 - [x] Apollo Server & Apollo Client
 
-- [x] Conteiner ready
+- [x] Container ready
 
-- [ ] Deploy with `git push origin main`
+- [x] Deploy with `git push origin main`
 
-- [ ] Github Actions
+- [x] Github Actions
 
-- [ ] Deploy containers to fly.io
+- [x] Deploy containers to fly.io
 
 - [ ] Tests
 
@@ -49,3 +50,7 @@ yarn --cwd server dev
 ```
 yarn --cwd client dev
 ```
+
+**Deploy**
+
+Open a Pull Request. The application will be deployed to fly.io automatically after the merge.
