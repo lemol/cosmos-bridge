@@ -27,7 +27,7 @@ const resolvers = {
         return result;
       } catch (error) {
         console.log(`> Error fetching data from NASA API: ${error}`);
-        throw new Error("Internal error");
+        throw new Error("Something went wrong :(");
       }
     },
   },
