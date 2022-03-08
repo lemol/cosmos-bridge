@@ -5,21 +5,21 @@
 
 ## Features
 
-[ ] Create React App
+- [x] Create React App
 
-[ ] GraphQL
+- [x] GraphQL
 
-[ ] Apollo Server & Apollo Client
+- [x] Apollo Server & Apollo Client
 
-[ ] Conteiner ready
+- [x] Conteiner ready
 
-[ ] Deploy with `git push origin main`
+- [ ] Deploy with `git push origin main`
 
-[ ] Github Actions
+- [ ] Github Actions
 
-[ ] Deploy containers to fly.io
+- [ ] Deploy containers to fly.io
 
-[ ] Tests
+- [ ] Tests
 
 
 ## Development
@@ -34,17 +34,18 @@ cd cosmos-bridge
 **Install**
 
 ```
-yarn
+yarn --cwd server install
+yarn --cwd client install
 ```
 
 **Run the server**
 
 ```
-cd server && yarn dev
+yarn --cwd server dev
 ```
 
 **Run the client**
 
 ```
-cd client && yarn dev
+yarn --cwd client dev
 ```
