@@ -10,10 +10,10 @@
 
 .image img {
   min-width: 120px;
-  background-color: antiquewhite;;
+  background-color: rgba(0,0,0,.03);
 }
 
 .image .title {
-  font-size: 0.6em;
+  font-size: 0.8em;
   text-align: center;
 }
