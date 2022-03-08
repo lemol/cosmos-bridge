@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import "./SearchBox.css";
 
-export default function SearchBox({ query, onChange, onSearch, loading }) {
+const SearchBox = ({ query, onChange, onSearch, loading }) => {
   const handleQueryChange = (event) => {
     onChange(event.target.value);
   };
@@ -27,3 +28,11 @@ export default function SearchBox({ query, onChange, onSearch, loading }) {
   );
 }
 
+SearchBox.propTypes = {
+  query: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onSearch: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
+}
+
+export default SearchBox;

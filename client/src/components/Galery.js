@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import Image from "./Image";
 import "./Galery.css";
 
-export default function Galery({ loading, images }) {
+const Galery = ({ loading, images }) => {
   return (
     <div className="galery">
       {loading && <div>Loading...</div>}
@@ -12,4 +13,16 @@ export default function Galery({ loading, images }) {
       ))}
     </div>
   );
+};
+
+Galery.propTypes = {
+  loading: PropTypes.bool.isRequired,
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      href: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 }
+
+export default Galery;

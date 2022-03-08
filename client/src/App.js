@@ -22,11 +22,10 @@ const SEARCH_QUERY = gql`
   }
 `;
 
-export default function App() {
+const App = () => {
   const [query, setQuery] = useState("");
   const [from, setFrom] = useState(1);
-  const [search, opts] = useLazyQuery(SEARCH_QUERY);
-  const { loading, data } = opts;
+  const [search, { loading, data }] = useLazyQuery(SEARCH_QUERY);
 
   const pagination = usePagination({
     currentPage: from,
@@ -70,3 +69,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;
