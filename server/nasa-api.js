@@ -10,22 +10,19 @@ exports.search = (query, from) => {
 
 const parseNasaResponse = (response) => {
   try {
-    console.log(response)
     const total = response.collection.metadata.total_hits;
-    const items = response.collection.items.map((item) => {
-      const { links, data: [{ title, description }] } = item;
-      const href = links?.find(link => link.rel === "preview").href ?? "";
+    const items = response.collection.items
+      .map((item) => {
+        const { links, data: [{ title, description }] } = item;
+        const href = links?.find(link => link.rel === "preview").href;
 
-      if (!href) {
-        console.log(item)
-      }
-
-      return {
-        href,
-        description,
-        title,
-      }
-    })
+        return {
+          href,
+          description,
+          title,
+        }
+      })
+      .filter(item => !!item.href);
 
     return {
       total,
