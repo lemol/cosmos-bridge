@@ -6,11 +6,11 @@ kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
 
-[build]
-  builder = "heroku/buildpacks:20"
-
 [env]
   PORT = "8080"
+
+[build.args]
+  REACT_APP_GRAPHQL_ENDPOINT = "https://cosmos-bridge-server.fly.dev/graphql"
 
 [experimental]
   allowed_public_ports = []
@@ -18,7 +18,7 @@ processes = []
 
 [[services]]
   http_checks = []
-  internal_port = 8080
+  internal_port = 8043
   processes = ["app"]
   protocol = "tcp"
   script_checks = []
