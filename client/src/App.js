@@ -50,7 +50,12 @@ export default function App() {
   return (
     <div className="App">
       <div>
-        <SearchBox query={query} onChange={setQuery} onSearch={handleSearch} />
+        <SearchBox
+          query={query}
+          onChange={setQuery}
+          onSearch={handleSearch}
+          loading={loading}
+        />
       </div>
       <div className="">
         <Galery loading={loading} images={images} />
