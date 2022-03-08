@@ -1,5 +1,8 @@
 import PropTypes from "prop-types";
 
+// TODO: optimize this component
+//       what if there is an error loading an image?
+// .     we also may want to have a fallback image for when the image is loading.
 const Image = ({ href, title }) => {
   return (
     <div className="image">

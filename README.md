@@ -20,7 +20,7 @@
 
 - [x] Deploy containers to fly.io
 
-- [ ] Tests
+- [x] Tests (at least only one for now 🙈)
 
 
 ## Development
